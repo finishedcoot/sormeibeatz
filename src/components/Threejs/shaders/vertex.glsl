@@ -93,7 +93,7 @@ float cnoise(vec3 P){
     
     for(float i = 1.0; i <= 2.0; i++)
     {
-    elevation -= abs((cnoise(vec3(modelPosition.x*3.0*i,modelPosition.z*3.0,uTime*0.2))*0.15/i));
+    elevation -= abs((cnoise(vec3(modelPosition.x*3.0*i,modelPosition.z*3.0,uTime*0.3))*0.15/i));
 
     }
 

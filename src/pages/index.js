@@ -1,9 +1,23 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import AnimationCanvas from "../components/Threejs/AnimationCanvas"
 import PageLoader from "../components/PageLoader"
 import { useState, useEffect } from "react"
+import loadable from "@loadable/component"
+
+const AnimationCanvas = loadable(
+  () => import("../components/Threejs/AnimationCanvas"),
+  {
+    fallback: (
+      <div className="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    ),
+  }
+)
 
 const IndexPage = () => {
   const [percent, setPercent] = useState(0)

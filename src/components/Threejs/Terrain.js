@@ -31,12 +31,12 @@ const Terrain = () => {
       uniforms: {
         uSize: { value: 20 * renderer.getPixelRatio() },
         uFrequency: { value: new THREE.Vector2(10, 5) },
-        uBigWaveElevation: { value: 0.1 },
+        uBigWaveElevation: { value: 0.15 },
         uBigWavesFrequency: { value: new THREE.Vector2(4, 1.5) },
         uBigWavesSpeed: { value: 0.75 },
         uTime: { value: 0 },
-        uDepthColor: { value: new THREE.Color("#f79824") },
-        uSurfaceColor: { value: new THREE.Color("#004996") },
+        uDepthColor: { value: new THREE.Color("#021527") },
+        uSurfaceColor: { value: new THREE.Color("#fd9d5c") },
       },
       fragmentShader,
       vertexShader,
@@ -55,7 +55,7 @@ const Terrain = () => {
         /> 
         )
       </bufferGeometry> */}
-      <planeBufferGeometry ref={geometryRef} args={[4, 4, 400, 400]} />
+      <planeBufferGeometry ref={geometryRef} args={[4, 4, 256, 256]} />
       <shaderMaterial
         ref={shaderRef}
         {...shaderData}

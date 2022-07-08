@@ -6,7 +6,7 @@
 
   void main() {
 
-    vec3 color = mix(uDepthColor,uSurfaceColor, vElevation * 5.0 + 0.5);
+    vec3 color = mix(uDepthColor,uSurfaceColor, (vElevation + 0.221) * 4.0  );
 
     gl_FragColor = vec4(color,1.0);
   }
